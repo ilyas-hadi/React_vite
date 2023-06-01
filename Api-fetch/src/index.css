@@ -2,11 +2,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: rgba(255, 255, 255, 0.87) !important;
+  background: #001e00 !important;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,11 +22,9 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: #001e00;
 }
 
 h1 {
@@ -66,4 +62,90 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+/* =====================
+Coustom styling
++=======================
+*/
+/* navigation bar */
+.nav_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.web-logo img {
+  height: auto;
+  width: 75px;
+}
+
+.web-links > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.web-links {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.web-links > ul > li {
+  padding-left: clamp(2rem, 4vw, 4rem);
+}
+
+.web-links > ul > li > a {
+  color: #fff;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.web-links > ul > li > a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #ffa500;
+  border-radius: 18px;
+  transition: all 0.32s;
+}
+
+.web-links > ul > li > a:hover::before {
+  width: 100%;
+}
+
+.web-links > ul > li > a:hover {
+  color: #ffa500;
+}
+/* Main styling */
+.Main {
+  height: 70vh;
+  background: #012304;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* +++Footer+++ */
+.footer p.read-the-docs {
+  padding: 1rem 0;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.footer {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  margin-top: auto;
 }
