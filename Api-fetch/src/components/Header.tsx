@@ -1,43 +1,52 @@
-import { Link } from 'react-router-dom';
-import Logo from '../assets/images/icon/Test_logo-01.svg';
+import { NavLink, Link} from "react-router-dom";
+import Logo from "../assets/images/icon/Test_logo-01.svg";
 
-function Header() {
+interface HeaderProps {
+ }
+
+const Header: React.FC<HeaderProps> = () => {
   return (
-    <>
     <div className="main_nav">
-        <div className="container">
-            <div className="nav_row">
-                <div className="web-logo"><img src={Logo} alt="Logo image" /></div>
-                <div className="web-links">
-                    <ul>
-                        <li>
-                           <Link to='/'>Home</Link>
-                        </li>
-                        <li>
-                           <Link to='about-us'>About Us</Link>
-                        </li>
-                        <li>
-                           <Link to='contact-us'>Contact Us</Link>
-                        </li>
-                        <li>
-                           <Link to='services'>Services</Link>
-                        </li>
-                        <li>
-                          <Link to='Login'>Login</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div className="container">
+        <div className="nav_row">
+          <div className="web-logo">
+            <Link to="/">
+              <img src={Logo} alt="Logo image" />
+            </Link>
+          </div>
+          <div className="web-links">
+            <ul>
+              <li>
+                <NavLink to="/" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about-us" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact-us" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
+                  Contact Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/services" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/Login" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
+                  Login
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-    </>
-  )
-}
-
-
-Header.propTypes = {
-
-}
+  );
+};
 
 export default Header;
-

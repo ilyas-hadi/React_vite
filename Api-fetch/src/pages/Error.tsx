@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Heading from "../components/Heading";
 
 const Error: React.FC = () => {
   const navigate = useNavigate();
@@ -21,10 +22,10 @@ const Error: React.FC = () => {
   }, [counter, navigate]);
 
   return (
-    <div className="container">
+    <div className="container mt-auto">
       <div className="Main">
         <div className="test-content">
-          <h1>Error page 404</h1>
+         <Heading upperHd='URL CHECKER'  innerHd='PAGE 404'  />
           <p>Redirecting to home in {counter} seconds...</p>
         </div>
       </div>

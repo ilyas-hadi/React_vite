@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import Heading from "../components/Heading";
+
 
 function Services() {
   return (
     <div className='container'>
       <div className="Main">
         <div className="test-content">
-          <h1>Our Services</h1>
+        <Heading upperHd='Services'  innerHd='Lets Enjoye Our Services'  />
         </div>
       </div>
     </div>

@@ -1,11 +1,8 @@
+/*----Fonts----*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87) !important;
-  background: #001e00 !important;
-  font-synthesis: none;
+  font-family: 'Jost', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,17 +11,17 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ffffff;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
+a:hover{
+  color: #fff;
 }
 
 body {
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background: #001e00;
+  color: #000000;
+  background: #ffffff;
 }
 
 h1 {
@@ -43,30 +40,14 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-/* =====================
+/*======================
 Coustom styling
-+=======================
-*/
++=======================*/
 /* navigation bar */
 .nav_row {
   display: flex;
@@ -84,6 +65,7 @@ Coustom styling
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -112,7 +94,7 @@ Coustom styling
   left: 0;
   height: 2px;
   width: 0;
-  background: #ffa500;
+  background: #5ba601;
   border-radius: 18px;
   transition: all 0.32s;
 }
@@ -120,20 +102,13 @@ Coustom styling
 .web-links > ul > li > a:hover::before {
   width: 100%;
 }
-
+.main_nav {
+  background: #07153a;
+}
 .web-links > ul > li > a:hover {
-  color: #ffa500;
+  color: #5ba601;
 }
 /* Main styling */
-.Main {
-  height: 70vh;
-  background: #012304;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
 
 /* +++Footer+++ */
 .footer p.read-the-docs {
@@ -143,9 +118,7 @@ Coustom styling
   font-size: 0.8rem;
   font-weight: 600;
 }
-.footer {
-  background: #fff;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  margin-top: auto;
+
+.main_Footer{
+  background: #07153a;
 }

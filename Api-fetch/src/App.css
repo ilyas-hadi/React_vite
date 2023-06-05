@@ -1,5 +1,5 @@
 /* coutom master classes */
-.y-pad{
+.y-pad {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -8,10 +8,17 @@ div#root {
   flex-direction: column;
   height: 100%;
 }
-html,body {
+html,
+body {
   height: 100%;
 }
+a.active {
+  color: #5ba601 !important;
+}
 
+a.active::before {
+  width: 100% !important;
+}
 
 .logo {
   height: 6em;
@@ -19,15 +26,177 @@ html,body {
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 .card {
   padding: 2em;
 }
 .read-the-docs {
-  color: #888;
+  color: #fff;
+}
+.form-floating > label {
+  color: #00153a;
+}
+.cousMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background: #5ba601;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+.test-content h1 {
+  text-align: center;
+}
+.login_form {
+  text-align: center;
+}
+/* ThemeHeading */
+.mainHeading h1.default_hdTheme {
+  font-size: clamp(20px, 4vw, 40px);
+  font-weight: 700;
+  color: #00153a;
+}
+.mainHeading h1.default_hdTheme span {
+  display: block;
+  font-size: 40%;
+  font-weight: 700;
+  color: #5ba601;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.mainHeading h1.dark_HdTheme {
+  color: #fff !important;
+}
+.mainHeading h1.dark_HdTheme span {
+  color: #00153a;
+}
+.mainHeading {
+  margin: 2.5rem 0 3.4rem;
+}
+.login-hd {
+  margin: 0 0 2rem 0 !important;
+}
+/* button styling */
+div.btn-defult a {
+  padding: 8px 20px;
+  background: #00153a;
+  transition: all 0.3s;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 160px;
+  margin: 1rem auto 0 auto;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+div.btn-defult a:hover {
+  background: #5ba601;
+  padding-left: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: 1px solid transparent;
+}
+span.startIco {
+  position: relative;
+}
+span.startIco:after {
+  content: "";
+  position: absolute;
+  top: 54%;
+  left: 15px;
+  background: #ffffff;
+  height: 2px;
+  width: 0;
+  transform: translateY(-50%);
+}
+span.startIco svg {
+  max-width: 0;
+  transform: translateX(-12px);
+  transition: all 0.3s;
+}
+span.LastIco {
+  transform: translateX(20px);
+  position: relative;
+}
+span.LastIco:before {
+  content: "";
+  position: absolute;
+  top: 54%;
+  right: 14px;
+  transform: translateY(-50%);
+  background: #f1e8d9;
+  height: 2px;
+  width: 100%;
+  transition: all 0.3s;
+}
+div.btn-defult a:hover span.btn_txt {
+  transform: translateX(30%);
+}
+div.btn-defult a:hover span.LastIco:before {
+  width: 0;
+}
+span.btn_txt {
+  transition: all 0.3s;
+  font-weight: 700;
+  font-size: clamp(10px,4vw,13px);
+}
+div.btn-defult a:hover span.startIco svg {
+  max-width: 18px;
+  transform: translateX(0);
+}
+div.btn-defult a:hover span.startIco:after {
+  width: 125%;
+}
+div.PrimeClass a:hover {
+  background: #ffffff;
+  color: #00153a;
+}
+div.PrimeClass a:hover span.startIco:after {
+  background: #00153a;
+}
+div.PrimeClass a:hover span.LastIco:before {
+  background: #00153a;
+}
+div.PrimeClass a:hover {
+  border: 1px solid #00153a;
+}
+/* card styling */
+.team_member {
+  background: #d1fa9f;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  border-top: 4px solid transparent;
+}
+.team_member:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 6px;
+  border: 1px solid #35a821;
+  border-top: 4px solid #00153a;
+}
+.image_holder {
+  height: 135px;
+  width: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.image_holder img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.4s;
+  filter: drop-shadow(1px 4px 0px #7cbb55);
+}
+.team_member:hover .image_holder img {
+  filter: drop-shadow(1px 14px 12px #7cbb55);
 }

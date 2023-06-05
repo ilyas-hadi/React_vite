@@ -1,12 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import Heading from "../components/Heading";
 
 function Contact() {
   return (
     <div className='container'>
      <div className="Main">
         <div className="test-content">
-          <h1>Contact Us</h1>
+          <Heading upperHd='Meet Our Agent'  innerHd='Our Best Agent'  />
         </div>
       </div>
     </div>
