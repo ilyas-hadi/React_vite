@@ -1,20 +1,16 @@
 import Button from "../components/Button";
-interface User {
-  name: string;
-  email: string;
-  phone: string;
-  img: string;
-}
+import { userType } from "../types/userTypes";
 interface UserCardProps {
-  user: User;
+  user: Partial<userType>;
+  image: string;
 }
- const UserCard: React.FC<UserCardProps> = ({ user }) => {
+ const UserCard: React.FC<UserCardProps> = ({ user, image }) => {
   return (
     <>
       <div className="col-12 col-sm-6 col-md-4 col-lg-3">
         <div className="team_member">
           <div className="image_holder">
-            <img src={user.img} alt="Team_Image" />
+            <img src={image} alt="Team_Image" />
           </div>
           <div className="basic_info">
             <h4>{user.name}</h4>

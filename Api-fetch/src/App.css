@@ -173,6 +173,11 @@ div.PrimeClass a:hover {
   transition: all 0.3s;
   border: 2px solid transparent;
   border-top: 4px solid transparent;
+  flex-direction: column;
+  height: 94%;
+}
+div.readMore {
+  margin-top: auto;
 }
 .team_member:hover {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -199,4 +204,10 @@ div.PrimeClass a:hover {
 }
 .team_member:hover .image_holder img {
   filter: drop-shadow(1px 14px 12px #7cbb55);
+}
+.basic_info{
+  text-align: center;
+}
+.basic_info h4{
+  font-size:1.2rem;
 }
