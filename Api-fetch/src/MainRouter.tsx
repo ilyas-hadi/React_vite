@@ -8,6 +8,7 @@ import Error from "./pages/Error";
 import App from "./App";
 import "./index.css";
 import "./App.css";
+import Detail from "./pages/Detail";
 import SharedLayout from "./pages/SharedLayout";
 
 function MainRouter() {
@@ -19,6 +20,7 @@ function MainRouter() {
         <Route path="/" element={<SharedLayout />}>
         <Route index element={<App />} />
         <Route path="about-us" element={<About />} />
+        <Route path="about-us/:userId" element={<Detail />} />
         <Route path="contact-us" element={<Contact />} />
         <Route path="services" element={<Services />} />
         <Route path="Login" element={<Login />} />

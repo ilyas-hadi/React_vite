@@ -5,6 +5,7 @@ interface UserCardProps {
   image: string;
 }
  const UserCard: React.FC<UserCardProps> = ({ user, image }) => {
+  const userRefUrl = `about-us/${user.id}`;
   return (
     <>
       <div className="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -18,7 +19,7 @@ interface UserCardProps {
           </div>
           <Button
             btnId="loginUser"
-            refText="#"
+            refText= {userRefUrl}
             buttonText="View More"
             anyOtherXlass="readMore"
           />

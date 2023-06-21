@@ -4,4 +4,5 @@ export interface userType {
   phone: string;
   img: string;
   image: string;
+  id:number;
 }

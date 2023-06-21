@@ -140,7 +140,7 @@ div.btn-defult a:hover span.LastIco:before {
 span.btn_txt {
   transition: all 0.3s;
   font-weight: 700;
-  font-size: clamp(10px,4vw,13px);
+  font-size: clamp(10px, 4vw, 13px);
 }
 div.btn-defult a:hover span.startIco svg {
   max-width: 18px;
@@ -205,9 +205,129 @@ div.readMore {
 .team_member:hover .image_holder img {
   filter: drop-shadow(1px 14px 12px #7cbb55);
 }
-.basic_info{
+.basic_info {
   text-align: center;
 }
-.basic_info h4{
-  font-size:1.2rem;
+.basic_info h4 {
+  font-size: 1.2rem;
+}
+/* example css */
+/* Demo ID */
+.map_holder {
+  height: 500px;
+  width: 100%;
+}
+.map_holder img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.test-content {
+  text-align: center;
+  padding: 2rem 0;
+}
+.Main.op_Detail {
+  padding: 0;
+  background: #d1fa9f;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  position: relative;
+}
+.test-content h4 {
+  font-weight: 800;
+  color: #00153a;
+}
+.test-content p {
+  margin-bottom: 0.3rem;
+  color: #fff;
+  font-weight: 600;
+  color: #48130b;
+}
+.outerContent {
+  margin-top: 2rem;
+}
+.dt-user_hodler img {
+  position: absolute;
+  top: -26px;
+  right: 25px;
+  background: #43140e;
+  padding-top: 2rem;
+  border-bottom-left-radius: 43%;
+  border-bottom-right-radius: 43%;
+  transition: all 0.5s;
+}
+/* coustom Loader */
+.loader-47 {
+  width: 65px;
+  height: 65px;
+  border: 5px solid #5ba601;
+  animation: loader-47-rotate 2s infinite ease;
+}
+
+.loader-47 div {
+  width: 100%;
+  background-color: #00153a;
+  animation: loader-47-fill 2s infinite ease-in;
+}
+
+@keyframes loader-47-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-47-fill {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+/* coutom setting loader */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #00163a7a;
+  z-index: 111;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }

@@ -33,6 +33,8 @@ function About() {
         console.log(error);
       });
   }, [apiURL]);
+ 
+
 /* images data */
 const usersImage: Partial<userType>[] = [
   {
@@ -75,7 +77,7 @@ const usersImage: Partial<userType>[] = [
             <div className="container">
               <div className="row">
                 {users.map((user, index) => (
-                  <UserCard key={index} user={user} image={user.image} />
+                  <UserCard key={index} user={user} image={user.image}  />
                 ))}
               </div>
             </div>
