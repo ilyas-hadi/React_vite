@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "./assets/images/icon/Test_logo-01.svg";
 import "./App.css";
 
@@ -8,25 +9,28 @@ function App() {
   return (
     <>
       {/* Main */}
-      <div className="container">
+      <div className="container ps-re">
         <div className="col-6 mx-auto y-pad">
           <div className="d-flex flex-column align-items-center justify-content-center">
             <div>
-              <a href="#" target="_blank">
+              <Link to="/" >
                 <img src={logo} className="logo" alt="Vite logo" />
-              </a>
+              </Link>
             </div>
             <h1>Here is Testing site</h1>
             <p>please count / Click from the given counter</p>
-            <div className="card">
-              <button onClick={() => setCount((count) => count + 1)}>
-                count is {count}
+            <div className="count_btn">
+              <button onClick={() => setCount((count) => count===0?count:count-1)}>
+                 -
               </button>
-              <p>
-                Edit <code> src/App.tsx </code> and save to test HMR
-              </p>
+              <button onClick={() => setCount((count) => count + 1)}>
+                 +
+              </button>
             </div>
           </div>
+        </div>
+        <div className="background_count">
+          <h1>{count}</h1>
         </div>
       </div>
       {/* Footer */}

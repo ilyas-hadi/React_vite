@@ -349,3 +349,37 @@ div.readMore {
   margin-bottom: 0.5rem;
   display: inline-block;
 }
+/* simple home page styling */
+.background_count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(7rem,4vw,13rem);
+  z-index: -1;
+  color: #35a821;
+}
+.ps-re {
+  position: relative;
+}
+.count_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 66%;
+}
+  .count_btn button {
+    padding: 16px;
+    width: 134px;
+    cursor: pointer;
+}
+.count_btn button:hover {
+  cursor: pointer;
+  background-color: #04245796;
+}
+.count_btn button {padding: 16px;width: 134px;}
