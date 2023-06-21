@@ -250,13 +250,18 @@ div.readMore {
 }
 .dt-user_hodler img {
   position: absolute;
-  top: -26px;
-  right: 25px;
+  top: -17px;
+  right: 17px;
   background: #43140e;
-  padding-top: 2rem;
-  border-bottom-left-radius: 43%;
-  border-bottom-right-radius: 43%;
+  padding-top: 1.5rem;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
   transition: all 0.5s;
+  overflow: hidden;
+  height: 83px;
+  width: 65px;
+  object-fit: contain;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 /* coustom Loader */
 .loader-47 {
@@ -265,7 +270,6 @@ div.readMore {
   border: 5px solid #5ba601;
   animation: loader-47-rotate 2s infinite ease;
 }
-
 .loader-47 div {
   width: 100%;
   background-color: #00153a;
@@ -330,4 +334,18 @@ div.readMore {
   justify-content: center;
   height: 100vh;
   width: 100%;
+}
+/* coustom page styling */
+.usr_id p {
+  font-weight: 700;
+  background: #4b1009;
+  color: #fff;
+}
+.outerContent p {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.outerContent strong {
+  margin-bottom: 0.5rem;
+  display: inline-block;
 }

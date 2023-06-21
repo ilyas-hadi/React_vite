@@ -4,31 +4,28 @@ import axios from "axios";
 import { userType } from "../types/userTypes";
 import Button from "../components/Button";
 import mapImg from "../assets/images/map-img.jpg";
-import team9 from "../assets/images/team/no-img_1.png";
+import avator from "../assets/images/team/avtor.png";
 import Loader from "../components/Loader"
-const apiURL = import.meta.env.VITE_BASE_API_URL as string;
 
+const apiUrl = import.meta.env.VITE_BASE_API_URL as string; 
 const Detail = () => {
-  const { userId } = useParams();
-  const [user, setUser] = useState<userType | null>();
+  const {userId}= useParams();
+  const [users, setUsers] = useState<userType | null>();
 
-  useEffect(() => {
-    axios
-      .get(`${apiURL}users/${userId}`)
-      .then((response) => {
-        setUser(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [apiURL, userId]);
+  useEffect(()=>{
+  axios.get(`${apiUrl}users/${userId}`)
+   .then((response)=>{
+    setUsers(response.data);
+   })
+   .catch((error)=>{
+    console.log(error)
+   })
+  },[userId])
 
-  if (!user) {
-    return (
-      <>
-        <Loader />
-      </>
-    );
+  if(!users){
+    return <>
+  <Loader />  
+    </>
   }
 
   return (
@@ -47,19 +44,34 @@ const Detail = () => {
               <div className="test-content">
                 <h4>About User</h4>
                 <div className="dt-user_hodler">
-                  <img src={team9} alt={user.name} />
+                  <img src={avator} alt={users.name} />
                 </div>
                 {/* Render the user image */}
-                <p>User ID: {userId}</p>
+                <div className="usr_id"><p>User ID: {userId}</p></div>
                 <div className="outerContent">
-                  <p>Name: {user.name}</p>
-                  <p>Email: {user.email}</p>
+                  <p>Name: {users.name}</p>
+                  <p>Email: {users.email}</p>
+                  <p>Phone: {users.phone}</p>
+                  <p>website: {users.website}</p>
+                  <hr />
+
+                  <strong>Company Detail</strong>
+                  <p>Company Name: {users.company.name}</p>
+                  <p>catchPhrase: {users.company.catchPhrase}</p>
+                  <p>bs: {users.company.bs}</p>
+                  <hr />
+                  
+                  <strong>Address</strong>
+                  <p>street: {users.address.street}</p>
+                  <p>suite: {users.address.suite}</p>
+                  <p>city: {users.address.city}</p>
+                  <p>Zipcode: {users.address.zipcode}</p>
                 </div>
                 <Button
                   btnId="BackToHome"
                   refText="/about-us"
                   buttonText="Go Back"
-                  anyOtherXlass="PrimeClass"
+                  anyOtherXlass="readMore"
                 />
               </div>
             </div>
